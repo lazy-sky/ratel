@@ -1,0 +1,6 @@
+*.md
+*.json
+.yarn
+.next
+.pnp.cjs
+.pnp.loader.mjs
