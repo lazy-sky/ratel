@@ -18,6 +18,7 @@ module.exports = {
     'eslint-config-prettier',
     'plugin:react/recommended',
     'plugin:@next/next/recommended',
+    'plugin:cypress/recommended',
   ],
   plugins: ['@typescript-eslint', 'import', 'prettier', 'react', 'react-hooks'],
   settings: { react: { version: 'detect' }, next: { rootDir: './src' } },
@@ -40,14 +41,7 @@ module.exports = {
     'no-restricted-imports': [
       'error',
       {
-        paths: [
-          {
-            name: 'util',
-            importNames: ['isArray'],
-            message: '`Array.isArray`를 대신 사용해주세요!',
-          },
-        ],
-        patterns: ['.*'],
+        patterns: ['../*'],
       },
     ],
     'no-async-promise-executor': 'warn',

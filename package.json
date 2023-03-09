@@ -6,13 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome --config video=false",
+    "cy:component": "yarn cy:run --component"
   },
   "dependencies": {
     "@types/node": "18.14.6",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
-    "eslint": "8.35.0",
+    "bluebird": "^3.7.2",
     "eslint-config-next": "13.2.3",
     "next": "13.2.3",
     "react": "18.2.0",
@@ -21,15 +24,44 @@
   },
   "packageManager": "yarn@3.4.1",
   "devDependencies": {
+    "@cypress/code-coverage": "^3.10.0",
+    "@cypress/react": "^7.0.2",
+    "@cypress/webpack-dev-server": "^3.3.0",
     "@next/eslint-plugin-next": "^13.2.3",
+    "@testing-library/cypress": "^9.0.0",
+    "@types/bluebird": "^3",
+    "@types/mocha": "^10.0.1",
     "@types/prettier": "^2",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
+    "babel-plugin-istanbul": "^6.1.1",
+    "cypress": "^12.7.0",
+    "cypress-mochawesome-reporter": "^3.3.0",
+    "eslint": "8.35.0",
     "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "prettier": "^2.8.4"
+    "mocha": "^10.2.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.8.4",
+    "webpack": "^5.75.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "cobertura",
+      "text"
+    ],
+    "report-dir": "cypress/reports/coverage",
+    "all": true,
+    "include": [
+      "src/components/**/*.cy.ts",
+      "src/components/**/*.cy.tsx"
+    ],
+    "exclude": []
   }
 }

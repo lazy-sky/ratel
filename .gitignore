@@ -5,6 +5,12 @@
 
 # testing
 /coverage
+cypress/downloads
+cypress/screenshots
+cypress/videos
+cypress/reports
+instrumented
+.nyc_output
 
 # next.js
 /.next/
