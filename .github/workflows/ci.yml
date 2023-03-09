@@ -23,3 +23,10 @@ jobs:
 
       - name: Check Component Test
         run: yarn cy:component
+
+cache:
+  paths:
+    - .cache
+    - .npm
+    - .yarn
+    - node_modules
