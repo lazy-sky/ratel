@@ -32,6 +32,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@cypress/react", "virtual:11441bb0b72dcd171ba1f9737d573e879f10f672390af22eb7fb056ad16c477ae1b39a7abafb41949ae644e8bb896994ca9267708572ee7ddea3454acc5f4b6a#npm:7.0.2"],\
             ["@cypress/webpack-dev-server", "npm:3.3.0"],\
             ["@next/eslint-plugin-next", "npm:13.2.3"],\
+            ["@next/swc-linux-x64-gnu", "npm:13.2.4"],\
             ["@testing-library/cypress", "virtual:11441bb0b72dcd171ba1f9737d573e879f10f672390af22eb7fb056ad16c477ae1b39a7abafb41949ae644e8bb896994ca9267708572ee7ddea3454acc5f4b6a#npm:9.0.0"],\
             ["@types/bluebird", "npm:3.5.38"],\
             ["@types/mocha", "npm:10.0.1"],\
@@ -793,6 +794,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/unplugged/@next-swc-linux-x64-gnu-npm-13.2.3-0c807bb1c8/node_modules/@next/swc-linux-x64-gnu/",\
           "packageDependencies": [\
             ["@next/swc-linux-x64-gnu", "npm:13.2.3"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:13.2.4", {\
+          "packageLocation": "./.yarn/unplugged/@next-swc-linux-x64-gnu-npm-13.2.4-b9b4732d94/node_modules/@next/swc-linux-x64-gnu/",\
+          "packageDependencies": [\
+            ["@next/swc-linux-x64-gnu", "npm:13.2.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8169,6 +8177,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@cypress/react", "virtual:11441bb0b72dcd171ba1f9737d573e879f10f672390af22eb7fb056ad16c477ae1b39a7abafb41949ae644e8bb896994ca9267708572ee7ddea3454acc5f4b6a#npm:7.0.2"],\
             ["@cypress/webpack-dev-server", "npm:3.3.0"],\
             ["@next/eslint-plugin-next", "npm:13.2.3"],\
+            ["@next/swc-linux-x64-gnu", "npm:13.2.4"],\
             ["@testing-library/cypress", "virtual:11441bb0b72dcd171ba1f9737d573e879f10f672390af22eb7fb056ad16c477ae1b39a7abafb41949ae644e8bb896994ca9267708572ee7ddea3454acc5f4b6a#npm:9.0.0"],\
             ["@types/bluebird", "npm:3.5.38"],\
             ["@types/mocha", "npm:10.0.1"],\
