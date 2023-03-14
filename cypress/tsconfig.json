@@ -1,5 +1,8 @@
 {
   "extends": "../tsconfig.json",
   "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": []
+  "exclude": [],
+  "compilerOptions": {
+    "types": ["cypress", "mocha", "node"]
+  },
 }
