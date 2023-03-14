@@ -6,8 +6,8 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 # 패키지 목록 업데이트 및 최적화 
-# RUN apt-get update -y && \
-#     rm -rf /var/lib/apt/lists/*
+RUN apk update && \
+    rm -rf /var/lib/apt/lists/*
 
 # install 및 caching
 COPY .yarn ./.yarn
@@ -51,6 +51,8 @@ RUN yarn rebuild
 ENV APP_ENV "prod"
 EXPOSE 4000
 ENV PORT 4000
+ENV FOO "foo"
+ENV BAR "bar"
 
 # CMD ["yarn", "start"]
 ENTRYPOINT ["yarn", "start"]
