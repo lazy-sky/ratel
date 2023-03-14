@@ -1,0 +1,31 @@
+# Next.js
+.next
+
+# Yarn PnP
+.yarn/sdks
+.yarn/unplugged
+.yarn/install-state.gz
+
+# Docs
+reports/
+
+# Test
+coverage
+.nyc_output
+cypress
+src/**/*.cy.tsx
+
+# Misc
+*.md
+!README.md
+.git*
+.prettier*
+.eslint*
+.babelrc
+cypress.config.js
+.dockerignore
+docker/Dockerfile
+
+# Editor directories
+.idea
+.vscode
