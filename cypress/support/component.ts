@@ -31,5 +31,6 @@ import '../../src/styles/globals.css';
 
 // Example use:
 // cy.mount(<MyComponent />)
+import '@cypress/code-coverage/support';
 
 export {};
