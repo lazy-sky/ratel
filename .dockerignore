@@ -25,6 +25,7 @@ src/**/*.cy.tsx
 cypress.config.js
 .dockerignore
 docker/Dockerfile
+public/__ENV.js
 
 # Editor directories
 .idea

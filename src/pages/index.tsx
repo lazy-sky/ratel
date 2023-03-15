@@ -1,7 +1,8 @@
-import getConfig from 'next/config';
 import Head from 'next/head';
 
 import Link from 'next/link';
+
+import { env } from 'utils/env';
 
 import FooDisplay from 'components/EnvDisplay';
 
@@ -31,14 +32,10 @@ export default function Home({ fooValue, barValue }: IHomeProps) {
 }
 
 export async function getServerSideProps() {
-  const { serverRuntimeConfig, publicRuntimeConfig } = getConfig();
-
-  const fooValue =
-    serverRuntimeConfig?.FOO || publicRuntimeConfig?.FOO || 'No FOO Defined!';
-  const barValue =
-    serverRuntimeConfig?.BAR || publicRuntimeConfig?.BAR || 'No BAR Defined!';
-
   return {
-    props: { fooValue, barValue },
+    props: {
+      fooValue: env.FOO,
+      barValue: env.BAR,
+    },
   };
 }

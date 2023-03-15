@@ -1,9 +1,9 @@
-interface IFooDisplayProps {
+interface IEnvDisplayProps {
   fooValue: string | number;
   barValue: string | number;
 }
 
-const EnvDisplay: React.FC<IFooDisplayProps> = ({ fooValue, barValue }) => {
+const EnvDisplay: React.FC<IEnvDisplayProps> = ({ fooValue, barValue }) => {
   return (
     <div>
       <div>The value of FOO is: {fooValue}</div>

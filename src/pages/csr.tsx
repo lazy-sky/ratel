@@ -1,21 +1,24 @@
-import getConfig from 'next/config';
+import { useEffect, useState } from 'react';
 
 import Link from 'next/link';
 
-import FooDisplay from 'components/EnvDisplay';
+import { env } from 'utils/env';
+
+import EnvDisplay from 'components/EnvDisplay';
 
 const CSR = () => {
-  const { serverRuntimeConfig, publicRuntimeConfig } = getConfig();
+  const [foo, setFoo] = useState('');
+  const [bar, setBar] = useState('');
 
-  const fooValue =
-    serverRuntimeConfig?.FOO || publicRuntimeConfig?.FOO || 'No FOO Defined!';
-  const barValue =
-    serverRuntimeConfig?.BAR || publicRuntimeConfig?.BAR || 'No BAR Defined!';
+  useEffect(() => {
+    setFoo(env.FOO);
+    setBar(env.BAR);
+  }, []);
 
   return (
     <div>
       <h1>CSR PAGE</h1>
-      <FooDisplay fooValue={fooValue} barValue={barValue} />
+      <EnvDisplay fooValue={foo} barValue={bar} />
       <div>
         <Link href="/">To SSR Page</Link>
       </div>
