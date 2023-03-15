@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "env": "yarn react-env --env APP_ENV",
+    "dev": "APP_ENV=dev yarn react-env --env APP_ENV -- next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "yarn react-env --env APP_ENV -- next start",
     "lint": "next lint",
     "cy:open": "cypress open",
     "cy:run": "cypress run --browser chrome --config video=false",
     "cy:component": "yarn cy:run --component"
   },
   "dependencies": {
+    "@beam-australia/react-env": "^3.1.1",
     "bluebird": "^3.7.2",
     "next": "^13.2.4",
     "react": "^18.2.0",
