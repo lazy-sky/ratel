@@ -60,12 +60,16 @@
       "cobertura",
       "text"
     ],
+    "extension": [".js", ".jsx", ".ts", ".tsx"],
     "report-dir": "cypress/reports/coverage",
     "all": true,
     "include": [
+      "src/components/**/*.ts",
+      "src/components/**/*.tsx"
+    ],
+    "exclude": [
       "src/components/**/*.cy.ts",
       "src/components/**/*.cy.tsx"
-    ],
-    "exclude": []
+    ]
   }
 }
