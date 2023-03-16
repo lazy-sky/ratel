@@ -18,6 +18,7 @@ instrumented
 
 # production
 /build
+/public/__ENV.js
 
 # misc
 .DS_Store

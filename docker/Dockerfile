@@ -6,8 +6,8 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 # 패키지 목록 업데이트 및 최적화 
-# RUN apt-get update -y && \
-#     rm -rf /var/lib/apt/lists/*
+RUN apk update && \
+    rm -rf /var/lib/apt/lists/*
 
 # install 및 caching
 COPY .yarn ./.yarn
@@ -35,6 +35,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 # RUN addgroup --system --gid 1001 nodejs
 # RUN adduser --system --uid 1001 nextjs
 
+COPY [".env.dev", ".env.prod", "./"]
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/next.config.js ./
 COPY --from=builder /app/.next ./.next
@@ -51,6 +52,8 @@ RUN yarn rebuild
 ENV APP_ENV "prod"
 EXPOSE 4000
 ENV PORT 4000
+ENV FOO "foo"
+ENV BAR "bar"
 
 # CMD ["yarn", "start"]
 ENTRYPOINT ["yarn", "start"]
